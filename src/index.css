@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --brand-primary: #0284C7;
+  --brand-primary-hover: #0369A1;
+  --brand-pink: #E91E79;
+  --brand-green: #65A30D;
+  --brand-orange: #EA580C;
+  --brand-yellow: #EAB308;
+  --surface-canvas: #F8FAFC;
+  --surface-card: #FFFFFF;
+  --surface-muted: #F1F5F9;
+  --ink-primary: #0F172A;
+  --ink-secondary: #475569;
+  --border-hairline: rgba(15, 23, 42, 0.1);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-padding-top: 5rem;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Kid-friendly playful custom SVG cursor on desktop pointer devices */
+@media (pointer: fine) {
+  body {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M5 3L21 13.5L13.5 15.8L10.5 23L5 3Z' fill='%230297DB' stroke='%23FFFFFF' stroke-width='2' stroke-linejoin='round'/%3E%3Ccircle cx='22' cy='6' r='3' fill='%23E91E79' stroke='%23FFFFFF' stroke-width='1.5'/%3E%3C/svg%3E") 5 3, auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  [role="tab"],
+  select {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M15 3L18.2 10.2L26 11.2L20.2 16.5L21.8 24.2L15 20.4L8.2 24.2L9.8 16.5L4 11.2L11.8 10.2L15 3Z' fill='%23FACC15' stroke='%230297DB' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") 15 15, pointer;
+  }
+
+  input,
+  textarea {
+    cursor: text;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

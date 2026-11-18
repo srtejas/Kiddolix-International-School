@@ -1,0 +1,6 @@
+{
+  "name": "Kiddolix International School",
+  "description": "Minimalist, mobile-friendly website for Kiddolix International School in Bengaluru featuring programs, About Us, announcements, academic calendar, and campus visit booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
